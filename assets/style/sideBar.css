@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --main-color:#FF7F3E;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.sidebar {
+    position: sticky;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.menu-close {
+    margin-left: -250px;
+}
+html[dir="rtl"] .sidebar {
+    
+    margin-right: 0;
+}
+
+html[dir="rtl"] .sidebar.menu-close {
+    /* right: -250px; */
+}
+.sidebar .sidebar-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+}
+.sidebar-header .header-logo {
+    width: 100%;
+}
+
+.sidebar-header .header-logo img {
+    width: 100%;
+    object-fit: fill;
+}
+.sidebar-header .toggler {
+    height: 35px;
+    width: 35px;
+    color: #151A2D;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: 0.4s ease;
+}
+.sidebar-header .menu-toggler {
+    background-color: #1a3870;
+    display: flex;
+    height: 35px;
+    width: 35px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: -45px; 
+    transition: 0.4s ease;
+}
+html[dir="rtl"] .sidebar-header .menu-toggler {
+    right: auto;
+    left: -45px;
+}
+.sidebar-header .menu-toggler span {
+    font-size: 1.5rem;
+}
+.sidebar-nav .nav-list {
+    list-style: none;
+    display: flex;
+    gap: 4px;
+    padding: 20px 15px;
+    flex-direction: column;
+}
+.sidebar-nav .nav-link {
+    color: #111;
+    display: flex;
+    gap: 12px;
+    border-radius: 8px;
+    padding: 12px 15px;
+    align-items: center;
+    text-decoration: none;
+    transition: 0.4s ease;
+}
+.sidebar-nav .nav-link:hover {
+    color: #fff;
+    background: var(--main-color);
+}
+.sidebar-nav .nav-item {
+    position: relative;
+}
+.sidebar-nav .nav-tooltip {
+    position: absolute;
+    top: -10px;
+    opacity: 0;
+    color: #151A2D;
+    display: none;
+    pointer-events: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    white-space: nowrap;
+    background: #fff;
+    left: calc(100% + 15px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+html[dir="rtl"] .sidebar-nav .nav-tooltip {
+    left: auto;
+    right: calc(100% + 15px);
+}
+.sidebar.collapsed .sidebar-nav .nav-tooltip {
+    display: block;
+}
+.sidebar-nav .nav-item:hover .nav-tooltip {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(50%);
+    transition: all 0.4s ease;
+}
+@media (max-width: 1024px) {
+    .sidebar {
+        position: fixed;
+        width: 250px;
+    }
+    .sidebar.menu-active {
+        left: 0; 
+    }
+    html[dir="rtl"] .sidebar {
+        left: auto;
+    }
+
+    html[dir="rtl"] .sidebar.menu-active {
+        right: 0; 
+    }
+    .sidebar-header {
+        padding: 8px 10px;
+    }
+
+    .sidebar-header .header-logo img {
+        width: 50%;
+        height: 40px;
+    }
+
+    .sidebar-header .menu-toggler {
+        right: -45px;
+    }
+    html[dir="rtl"] .sidebar-header .menu-toggler {
+        right: auto;
+        left: -45px;
+    }
+
+    .sidebar .sidebar-nav .nav-list {
+        padding: 0 10px;
+    }
+
+    .sidebar-nav .nav-link {
+        gap: 10px;
+        padding: 10px;
+        font-size: 0.94rem;
+    }
+
+    .sidebar-nav .nav-link .nav-icon {
+        font-size: 1.37rem;
+    }
+
+    .sidebar-nav .secondary-nav {
+        position: relative;
+        bottom: 0;
+        margin: 40px 0 30px;
+    }
+}
+
+
+
+.sidebar-nav .nav-item a.active {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.sidebar-nav .nav-item a.active .nav-icon,
+.sidebar-nav .nav-item a.active .nav-label {
+    color: #fff;
+}

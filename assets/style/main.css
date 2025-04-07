@@ -1,0 +1,331 @@
+:root {
+    --main-color:#FF7F3E;
+}
+
+body,html{
+    overflow-x: hidden;
+}
+html{
+    /* overflow: hidden; */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+    
+}
+a {
+    text-decoration: none;
+}
+/* charts */
+.chart-container {
+    box-shadow: 0px 0px 5px #ddd;
+    border-radius: 10px;
+    padding-block: 30px;
+    padding-inline: 20px;
+    height: 100%;
+}
+
+.chart-info {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.info-box {
+    font-size: 25px;
+}
+
+/* scond-chart */
+.chart2 span {
+    color: #7E84A3;
+}
+
+/* table */
+tr {
+    padding-block: 10px;
+}
+.table-striped>tbody>tr:nth-of-type(even)>* {
+    background-color: #a89b2942 !important;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    background-color: #fff !important;
+}
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    --bs-table-bg-type: rgb(255 255 255 / 5%);
+}
+.thead {
+    background-color: transparent !important;
+}
+
+table th,
+table td {
+    border-top: 0px solid #dee2e6 !important;
+}
+
+.table>tbody {
+    border-block: 3px solid #E6E9F4;
+}
+
+thead th {
+    color: #7E84A3 !important;
+}
+.action span{
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;  
+}
+.action .delete span{
+    background-color: #D80864;
+   
+}
+.action .edit span{
+    background-color: #DEC116;
+    color: #fff;
+    padding: 5px;
+    border-radius: 10px;  
+}
+.action span:hover{
+    color: #ffffff5e;
+}
+.container {
+    width: 100% !important;
+}
+
+.container {
+    flex: 1 !important;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* =====cards===== */
+.cards-report .card {
+    border: none !important;
+    box-shadow: 0px 0px 5px #ddd;
+    margin-block: 10px;
+    padding-block: 30px;
+    padding-inline: 20px;
+    color: #fff;
+}
+.col-12:first-child .card {
+    background-image: linear-gradient(to right, #5C3FA1, #342586);
+}
+.col-12:nth-child(2) .card {
+    background-image: linear-gradient(to right, #CB35EB, #D80864);
+}
+.col-12:nth-child(3) .card {
+    background-image: linear-gradient(to right, #dec0168e, #DEC116);
+}
+.col-12:nth-child(4) .card {
+    background-image: linear-gradient(to right, #1EB4FF, #34A8AC);
+}
+/* data-section */
+.data {
+    padding-block: 10px;
+    padding-inline: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px #ddd;
+}
+.item, #checkAll {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    margin-inline: 5px;
+}
+ul.pagination {
+    justify-content: center;
+}
+ul.pagination a {
+    box-shadow: 0 0 5px #ddd !important;
+}
+.page-link {
+    border: none !important;
+    color: #5A607F !important;
+}
+
+/* =====operation===== */
+.operation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.operation div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 10px;
+}
+.operation div:first-child .search {
+    position: relative;
+    margin-inline: 10px;
+}
+.operation div:first-child .search input {
+    width: 100% !important;
+    padding-inline-start: 25px;
+}
+.operation div:first-child .search input::placeholder {
+    color: #ddd;
+}
+.form-control {
+    box-shadow: 0px 0px 5px #ddd !important;
+    border: none !important;
+}
+.operation div:first-child .search label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+}
+.operation div:first-child .search label span {
+    color: #ddd;
+}
+.operation div:last-child {
+    padding-block: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+.operation>div:last-child>span:first-child, .operation>div:last-child>span:nth-child(2) {
+    box-shadow: 0 0 5px #ddd;
+    font-size: 15px;
+    border-radius: 5px;
+    padding-inline: 5px;
+    padding-block: 10px;
+    cursor: pointer;
+}
+.operation>div:last-child>span:first-child {
+    color: var(--main-color);;
+}
+.operation>div:last-child>span:nth-child(2) {
+    color: red;
+}
+.operation>div:last-child button {
+    font-size: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 5px;
+    color: var(--main-color);;
+    padding-inline: 5px;
+    padding-block: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.operation>div:last-child .addFile>a {
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    background-color: var(--main-color);
+    cursor: pointer;
+    color: #fff;
+    padding-inline: 5px;
+    padding-block: 10px;
+    border-radius: 5px;
+}
+.operation>div:last-child .addFile>a span {
+    font-size: 10px;
+}
+.addFile{
+    display: flex;
+    align-items: center;
+}
+.addFile p{
+    margin: 0;
+}
+.addFile label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+    cursor: pointer;
+    color: #fff;
+    padding-inline: 12px;
+    padding-block: 6px;
+    border-radius: 5px;
+}
+.dropdown-toggle {
+    background-color: #fff !important;
+    color: #ddd;
+    border: none;
+    box-shadow: 0 0 5px #ddd;
+}
+.dropdown-toggle:hover {
+    color: #ddd;
+}
+.dropdown-toggle span {
+    margin-inline-end: 100px;
+}
+.file-name{
+    color: var(--main-color);
+    cursor: pointer;
+    padding-inline: 12px;
+    padding-block: 6px;
+    border-radius: 5px;
+    border: 1px dashed #ff7f3e;
+    flex: 1;
+}
+
+/* ===== adding course&adding instructor====== */
+.btn-box{
+    display: grid;
+    place-content: center;
+}
+.btn-submit{
+    margin: 0 auto;
+    margin-block: 15px;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+.btn-submit:hover{
+    background-color: var(--main-color);
+    color: #fff;
+}
+input::placeholder {
+    color: red;
+    opacity: 1; 
+  }
+/* Responsive media query code for small screens */
+@media (max-width: 1024px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .charts {
+        padding: 10px;
+    }
+
+    .chart-container {
+        padding: 20px;
+    }
+
+    .chart-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .info-box {
+        font-size: 20px;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 767px) {
+    .cards-report{
+        /* padding: 0!important; */
+    }
+}

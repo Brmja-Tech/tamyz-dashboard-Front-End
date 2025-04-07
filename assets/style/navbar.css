@@ -1,0 +1,153 @@
+:root {
+    --main-color: #FF7F3E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    padding: 0;
+}
+
+/* =====navbar-section-section===== */
+
+.container {
+    position: relative;
+}
+
+.navbar-section {
+    position: sticky;
+    top: 0px;
+    z-index: 111;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-inline-start: 30px;
+    padding-block: 10px;
+}
+
+
+.navbar-section>h1 {
+    color: #0A1056;
+}
+
+.setting-profile-parent .arrowBottom {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.arrowBottomRotate {
+    transform: rotate(180deg);
+}
+
+.navbar-section .setting-profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #ddd;
+
+}
+
+.setting-profile .image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px #ddd;
+}
+
+.navbar-section .setting-profile span:nth-child(2) {
+    margin-inline: 10px;
+}
+
+
+
+/* setting-profile */
+.setting-profile .image img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+}
+
+.setting-profile-parent {
+    position: relative;
+}
+
+/* drop down */
+.setting-profile-parent .drobDownMenue {
+
+    padding-block: 5px;
+    border-radius: 50px;
+    transition: all 0.5s;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.setting-profile-parent .drobDownMenue ul li {
+    padding-inline: 26px;
+    margin-block-end: 5px;
+    transition: all 0.5s;
+    
+}
+.setting-profile-parent .drobDownMenue ul li:hover 
+{
+background-color: #dddddd8a;
+}
+
+.setting-profile-parent .drobDownMenue ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: red;
+}
+
+.setting-profile-parent .drobDownMenue ul li a span {
+    margin-inline-start: 10px;
+}
+
+.navbar-section.scrolled {
+    color: #fff !important;
+    border-radius: 15px;
+    background: var(--main-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.navbar-section.scrolled h1{
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .navbar-section .setting-profile span:nth-child(2) {
+        font-size: 10px;
+    }
+    
+}
+
+@media (max-width: 375px) {
+    .navbar-section {
+        padding-inline-end: 0px;
+    }
+    .navbar-section>h1 {
+        text-align: center;
+        flex: 1;
+        font-size: 16px;
+    }
+    .navbar-section>h1.basic {
+        font-size: 6px;
+    }
+}
